@@ -1,0 +1,13 @@
+<!-- attendance.component.html -->
+<div>
+    <h2>Mark Attendance</h2>
+    <p>Date: {{ today | date:'medium' }}</p>
+    <button (click)="markAttendance()">Mark Attendance</button>
+    <div *ngIf="attendanceRecord.length > 0">
+      <h3>Attendance Record</h3>
+      <ul>
+        <li *ngFor="let entry of attendanceRecord">{{ entry.date | date:'medium' }}</li>
+      </ul>
+    </div>
+  </div>
+  

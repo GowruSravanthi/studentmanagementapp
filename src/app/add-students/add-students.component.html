@@ -1,0 +1,20 @@
+<!-- add-students.component.html -->
+<div>
+  <h3>Add Students</h3>
+
+  <div class="form-group">
+    <label for="studentName">Student Name</label>
+    <input type="text" id="studentName" [(ngModel)]="newStudent.name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="rollNumber">Roll Number</label>
+    <input type="text" id="rollNumber" [(ngModel)]="newStudent.rollNumber" required />
+  </div>
+
+  <button type="button" (click)="addStudent()">Add Student</button>
+  <h3>Student List</h3>
+    <ul>
+      <li *ngFor="let student of students">{{ student.name }} - {{ student.rollNumber }}</li>
+    </ul>
+</div>

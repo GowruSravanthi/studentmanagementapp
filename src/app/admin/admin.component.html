@@ -1,0 +1,28 @@
+<!-- admin.component.html -->
+<div>
+    <h2>Admin Dashboard</h2>
+    <form (ngSubmit)="submitForm()" #adminForm="ngForm">
+      <div class="form-group">
+        <div>
+          <label>
+            <input type="radio" name="role" [(ngModel)]="admin.role" value="students" required />
+            add-students
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="role" [(ngModel)]="admin.role" value="departments" required />
+            add departments
+          </label>
+        </div>
+      </div>
+    </form>
+  
+    <!-- Show AddStudentsComponent if the 'admin' radio is selected -->
+    <app-add-students *ngIf="admin.role === 'students'"></app-add-students>
+  
+    <!-- Show AddDepartmentsComponent if the 'admin' radio is selected -->
+    <app-add-departments *ngIf="admin.role === 'departments'"></app-add-departments>
+      
+</div>
+  

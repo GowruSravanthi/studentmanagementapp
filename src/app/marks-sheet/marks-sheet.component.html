@@ -1,0 +1,19 @@
+<!-- marks-sheet.component.html -->
+<div>
+    <h2>Marks Sheet</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mark of marks">
+          <td>{{ mark.subject }}</td>
+          <td>{{ mark.marks }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
